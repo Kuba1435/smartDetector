@@ -26,7 +26,9 @@ jobs:
             pip install -r requirements.txt
       - run:
           name: Deploy
-          command: ./deploy.sh  # Skript pro nasazení
+          command: |
+            echo "Nasazení aplikace..."
+            python main.py
 
 workflows:
   version: 2
