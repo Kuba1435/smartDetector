@@ -11,11 +11,8 @@ jobs:
           command: |
             python -m pip install --upgrade pip
             pip install -r requirements.txt
-      - run:
-          name: Build the project
-          command: python setup.py sdist bdist_wheel
       - store_artifacts:
-          path: dist  # Uložíme artefakty z buildu
+          path: main.py  # Uložíme hlavní soubor jako artefakt (pokud je to potřeba)
 
   deploy:
     docker:
