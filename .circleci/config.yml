@@ -1,0 +1,52 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: cimg/python:3.9  # Použijeme oficiální Python Docker image
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Run tests
+          command: pytest  # nebo jakýkoli jiný testovací příkaz, který používáte
+
+  build:
+    docker:
+      - image: cimg/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Build the project
+          command: python setup.py sdist bdist_wheel  # Příklad pro Python projekt
+      - store_artifacts:
+          path: dist  # Uložíme artefakty z buildu
+
+  deploy:
+    docker:
+      - image: cimg/python:3.9
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: pip install -r requirements.txt
+      - run:
+          name: Deploy
+          command: ./deploy.sh  # Skript pro nasazení
+
+workflows:
+  version: 2
+  example:
+    jobs:
+      - test
+      - build:
+          requires:
+            - test
+      - deploy:
+          requires:
+            - build
