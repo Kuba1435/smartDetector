@@ -1,0 +1,2 @@
+# smartDetector
+VYT projekt 
