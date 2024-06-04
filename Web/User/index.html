@@ -14,13 +14,58 @@
     </header>
     <body>
 
-        <div class="mainBlock">
+        <section class="mainBlock" id="section1">
             <img src="../Images/macuraLogo.svg">
             <div class="mainBlockText">
                 <h1>Jakub Macura</h1>
                 <p>Závěrečný projekt do VYT na téma inteligentní detektor pohybu</p>
+                <a href="#section2" ><button >Zjistit více o projektu</button></a>
             </div>
-        </div>
+        </section>
+        
+
+        <section class="productInfo" id="section2">
+            <div class="productInfoText">
+                <h1>Inteligentní detektor pohybu</h1>
+                <div class="line">
+                    <p>V tomto projektu jsem se rozhodl vytvořit inteligentní detektor pohybu pomocí microbitu. 
+                        Inteligentní v tom, že nejenom dokáže detekovat pohyb pomocí PIR senzoru na vzdálenost až 5 metrů, 
+                        ale i odeslat upozornění uživateli přes internet pomocí modulu ESP8266. 
+                        Uživatel si dokáže zobrazit historii pohybů přímo z webového prohlížeče a to díky databázi, 
+                        která ukládá všechny pohyby snímané detektorem. Nastavit si může i časový interval,
+                        ve kterém bude zařízení detekovat pohyb.
+                    </p>
+                    <img src="../Images/smartDetector.svg" alt="smartDetector" class="smartDetector">
+                </div>
+            </div>
+            </section>
+
+
+        <section class="materialInfo" id="section3">
+            <h1>Využitá technologie</h1>
+            <div class="microbit">
+                <div class="microbitGif">
+
+                    <img src="../Images/microbit.gif" alt="microbit" class="microbitGif">
+                </div>
+                <div class="microbitText">
+                    <h2>Micro:bit</h2>
+                    <p> V tomto projektu byl využit jako hlavní řídící jednotka inteligentního detektoru. 
+                        Má za úkol zpracovávat data z PIR senzoru a odesílat je přes sériovou linku modulu ESP8266.
+                        Při detekování pohybu začnou na microbitu blikat LED diody a přehrávat se zvuková výstraha v podobě pípání. 
+                        Pomocí speciální kombinace tlačítek může uživatel tento alarm vypnout. Zároveň microbit při detekci pohybu odešle informaci k uživateli přes internet.
+                    </p>
+            </div>
+            <div class="ESP">
+                <div class="ESP8266Text">
+                    <h2>ESP8266</h2>
+                    <p>Modul ESP8266 byl využit pro odesílání informací o detekci pohybu k uživateli přes internet. 
+                        Modul se připojuje k domácí síti a odesílá informace o detekci pohybu na server, 
+                        kde se ukládají do databáze. Uživatel si může zobrazit historii pohybů přímo z webového prohlížeče.
+                    </p>
+                </div>
+            </div>
+        </section>
     </body>
 
     <footer>
