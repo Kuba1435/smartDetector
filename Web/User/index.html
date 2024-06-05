@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="height=device-height, initial-scale=1.0">
     <link rel="stylesheet" href="./CSS/home.css"> 
+    <link rel="stylesheet" href="./CSS/navbar.css">
       
-    <title>Document</title>
+    <title>Inteligentní detektor pohybu</title>
 </head>
 <body>
     <header>
-        <h3>Jakub Macura web site</h3>
+        <!-- <img src="../Images/logo_spseol_web.png" alt="menu" class="menu"> -->
+        <nav>
+            <a href="./index.html" class="active">Domů</a>
+            <a href="">Jak zprovoznit</a>
+            <a href="./contact.html">Kontakty</a>
+        </nav>
     </header>
-    <body>
 
         <section class="mainBlock" id="section1">
             <img src="../Images/macuraLogo.svg">
@@ -55,8 +60,10 @@
                         Při detekování pohybu začnou na microbitu blikat LED diody a přehrávat se zvuková výstraha v podobě pípání. 
                         Pomocí speciální kombinace tlačítek může uživatel tento alarm vypnout. Zároveň microbit při detekci pohybu odešle informaci k uživateli přes internet.
                     </p>
+                </div>
             </div>
             <div class="ESP">
+                
                 <div class="ESP8266Text">
                     <h2>ESP8266</h2>
                     <p>Modul ESP8266 byl využit pro odesílání informací o detekci pohybu k uživateli přes internet. 
@@ -64,12 +71,25 @@
                         kde se ukládají do databáze. Uživatel si může zobrazit historii pohybů přímo z webového prohlížeče.
                     </p>
                 </div>
+                <img src="../Images/ESP8266.png" alt="ESP8266" class="ESP8266Image">
+            </div>
+            <div class="PIR"> 
+
+                <img src="../Images/PIR AM312.jpg" alt="PIR AM312" class="PIRImage">
+                <div class="PIRText">
+                    <h2>PIR senzor</h2>
+                    <p>PIR senzor byl využit pro detekci pohybu. 
+                        Senzor dokáže detekovat pohyb na vzdálenost až 5 metrů a úhel 120°. 
+                        Při detekci pohybu vysílá signál na microbit, který začne blikat LED diody a přehrávat zvukovou výstrahu.
+                    </p>
+                </div>
             </div>
         </section>
-    </body>
 
     <footer>
-        <p>&copy; Jakub Macura & VOŠ a SPŠE Olomouc 2024</p>
+        <div class="creator">
+            <p >&copy; Jakub Macura & VOŠ a SPŠE Olomouc 2024</p>
+        </div>
     </footer>
 
 

@@ -1,0 +1,30 @@
+header {
+    background-color: rgba(16,51,94,0.8);
+    z-index: 1000;
+    color: white;
+    padding: 10px;
+    text-align: right;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    
+    
+}
+
+header nav {
+    padding: 1%;
+    text-align: right;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header nav .active {
+    font-size: 1.05em;
+    font-weight: bold;
+}

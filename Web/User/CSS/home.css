@@ -4,7 +4,22 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     min-width: 320px;
+    overflow-x: hidden;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(16,51,94,0.5);
+}
+
+
+
+
 
 body{
     display: flex;
@@ -12,6 +27,8 @@ body{
     flex-direction: column;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
 }
+
+
 
 .mainBlock{
     display: flex;
@@ -81,7 +98,7 @@ body{
 
 /* SECTION MATERIAL INFO */
 .materialInfo{
-    height: 80vh;
+    height: 160%;
     display: flex;
     flex-direction: column;
     
@@ -110,17 +127,56 @@ body{
     margin-top: 5%;
 }
 
-.materialInfo .ESP32{
+
+.materialInfo .ESP{
     flex-direction: row;
     display: flex;
+    text-align: right;
+    margin-right: 10%;
+    margin-left: 10%;
+}
+
+.ESP8266Image{
+    width: 50vw;
+    max-width: 50%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: -2%;
+
+}
+
+.PIR{
+    display: flex;
+    flex-direction: row;
+    margin: 0 10%;
+}
+.PIRImage{
+    width: 50vw;
+    max-width: 20%;
+    height: auto;
+    margin-right: 5%;
+}
+
+.PIRText{
+    max-width: 40vw;
+    margin-top: 5%;
 }
 
 
+footer{
+    background-color: rgba(16,51,94,0.9);
+    color: white;
+    height: auto;
+    padding: 3vh 10%;
+    margin: 2% 0 0 0 ;
+    text-align: center;
+    
+}
 
 
 /* MEDIA QUERIES */
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .mainBlock {
         flex-direction: column;
     }
@@ -160,14 +216,26 @@ body{
     }
 
     .materialInfo .microbit{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .materialInfo .microbitGif{
         width: 10vw;
         max-width: 5%;
         height: auto;
         margin-right: 0;
+        margin-top: 2%;
     }
+    .materialInfo .ESP{
+        text-align: left;
+        margin-left: 10%;
+        flex-direction: column;
+    }
+    .materialInfo .PIR{
+        flex-direction: column-reverse;
+    }
+
+    
+
 
 
 }
