@@ -31,8 +31,214 @@ body{
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 80vh;
+    height: 75vh;
 }
 .contactBlockText{
     margin-top: 1%;
+    padding: 0 10%;
+}
+
+.globeIcon{
+    width: 100%;
+    height: 15vh;
+    margin-bottom: 2.5%;
+}
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5%;
+    background-color: rgba(220, 220, 220, 0.329);
+    padding: 5% 0 ;
+}
+
+.address{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+
+.mapPointer{
+    width: 100%;
+    height: 5vh;
+    margin-bottom: 2.5%;
+}
+
+.phone{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.phoneIcon{
+  width: 100%;
+  height: 5vh;
+  margin-bottom: 2.5%;
+}
+
+.email{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.emailIcon{
+  width: 100%;
+  height: 5.9vh;
+  margin-bottom: 2.5%;
+}
+
+footer{
+  background-color: rgba(16,51,94,0.9);
+  color: white;
+  height: auto;
+  padding: 3vh 10%;
+  margin: 2% 0 0 0 ;
+  text-align: center;
+  
+}
+
+
+.posterVideo{
+    height: 60vh;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+.poster, img {
+    position: relative;
+    width: 5vw;
+    max-height: 50vh;
+    height: auto;
+    margin-right: 2vw;
+    user-select: none;
+}
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+}
+
+.overlay p {
+    margin: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.poster:hover .overlay {
+    opacity: 1;
+}
+.video{
+    width: 15vw;
+    height: 10vh;
+    margin-left: 2vw;
+}
+
+
+@media  screen and (max-width: 800px){
+    .contacts{
+        flex-direction: column;
+      }
+    .address{
+        margin-bottom: 5%;
+    }
+    .phone{
+        margin-bottom: 5%;
+    }
+    .email{
+        margin-bottom: 5%;
+    }
+    .mapPointer{
+        height: 10vh;
+    }
+    .phoneIcon{
+        height: 10vh;
+    }
+    .emailIcon{
+        height: 10vh;
+    }
+    .posterVideo{
+      flex-direction: column;
+      justify-content: center;
+      align-self: center;
+      height: 60vh !important ;
+      margin-bottom: 10vh  !important;
+    }
+  
+    .poster{
+      margin-bottom: 0 !important;
+      justify-content: center;
+      align-self: center;
+      margin-right: 0 !important;
+    }
+    .video{
+      width: 70vw !important;
+      display: flex;
+      justify-content: center;
+    }
+  
+}
+
+@media screen and (max-width: 750px){
+    .posterVideo{
+      height: 90vh !important;
+      margin-bottom: 23vh !important;
+      margin-top: -5vh !important;
+    }
+    .video{
+      width: 40vw !important;
+      height: 10vh !important;
+      margin-top: 6vh;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+
+  .posterVideo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    height: 80vh ;
+    margin-top: -10%;
+  }
+
+  .poster{
+    margin-bottom: 5vh;
+    justify-content: center;
+    align-self: center;
+  }
+  .video{
+    width: 80vw;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+  }
+
+  .posterVideo{
+    margin-top: 5%;
+    margin-bottom: 33vh;
+  }
 }

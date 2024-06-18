@@ -2,14 +2,16 @@ header {
     background-color: rgba(16,51,94,0.8);
     z-index: 1000;
     color: white;
-    padding: 10px;
+    padding: 10px 10px 5px 10px;
     text-align: right;
     position: fixed; 
     top: 0;
     left: 0;
     width: 100%; 
     box-shadow: 0 2px 5px rgba(0,0,0,0.26);
-    
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;    
     
 }
 
@@ -27,4 +29,27 @@ header nav a {
 header nav .active {
     font-size: 1.05em;
     font-weight: bold;
+
+}
+
+header img {
+    width: 5px;
+    max-height: 50px;
+    margin-left: 10px;
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 800px) {
+    header img{
+        display: none;
+    }
+    header {
+        padding-bottom: 10px;
+        justify-content: flex-end;
+    }
+    header nav {
+        overflow: hidden;
+    }
+
+    
 }

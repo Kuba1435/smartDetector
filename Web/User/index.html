@@ -11,16 +11,16 @@
 </head>
 <body>
     <header>
-        <!-- <img src="../Images/logo_spseol_web.png" alt="menu" class="menu"> -->
+        <img src="./Images/logo_spseol_web.png" alt="menu" class="menu">
         <nav>
             <a href="./index.html" class="active">Domů</a>
-            <a href="">Jak zprovoznit</a>
+            <a href="./product.html">Produkt</a>
             <a href="./contact.html">Kontakty</a>
         </nav>
     </header>
 
         <section class="mainBlock" id="section1">
-            <img src="../Images/macuraLogo.svg">
+            <img src="./Images/macuraLogo.svg">
             <div class="mainBlockText">
                 <h1>Jakub Macura</h1>
                 <p>Závěrečný projekt do VYT na téma inteligentní detektor pohybu</p>
@@ -40,7 +40,7 @@
                         která ukládá všechny pohyby snímané detektorem. Nastavit si může i časový interval,
                         ve kterém bude zařízení detekovat pohyb.
                     </p>
-                    <img src="../Images/smartDetector.svg" alt="smartDetector" class="smartDetector">
+                    <img src="./Images/smartDetector.svg" alt="smartDetector" class="smartDetector">
                 </div>
             </div>
             </section>
@@ -51,12 +51,12 @@
             <div class="microbit">
                 <div class="microbitGif">
 
-                    <img src="../Images/microbit.gif" alt="microbit" class="microbitGif">
+                    <img src="./Images/microbit.gif" alt="microbit" class="microbitGif">
                 </div>
                 <div class="microbitText">
                     <h2>Micro:bit</h2>
                     <p> V tomto projektu byl využit jako hlavní řídící jednotka inteligentního detektoru. 
-                        Má za úkol zpracovávat data z PIR senzoru a odesílat je přes sériovou linku modulu ESP8266.
+                        Má za úkol zpracovávat data z PIR senzoru a odesílat je přes sériovou komunikaci do modulu ESP8266.
                         Při detekování pohybu začnou na microbitu blikat LED diody a přehrávat se zvuková výstraha v podobě pípání. 
                         Pomocí speciální kombinace tlačítek může uživatel tento alarm vypnout. Zároveň microbit při detekci pohybu odešle informaci k uživateli přes internet.
                     </p>
@@ -67,20 +67,20 @@
                 <div class="ESP8266Text">
                     <h2>ESP8266</h2>
                     <p>Modul ESP8266 byl využit pro odesílání informací o detekci pohybu k uživateli přes internet. 
-                        Modul se připojuje k domácí síti a odesílá informace o detekci pohybu na server, 
-                        kde se ukládají do databáze. Uživatel si může zobrazit historii pohybů přímo z webového prohlížeče.
+                        Modul se připojuje k domácí síti podle poskytnutých hodnot microbitem a odesílá informace o detekci pohybu na server, 
+                        kde se ukládají do databáze. Uživatel si může zobrazit historii pohybů přímo z webového prohlížeče. Programuje se v jazyce C++ v arduino IDE.
                     </p>
                 </div>
-                <img src="../Images/ESP8266.png" alt="ESP8266" class="ESP8266Image">
+                <img src="./Images/ESP8266.png" alt="ESP8266" class="ESP8266Image">
             </div>
             <div class="PIR"> 
 
-                <img src="../Images/PIR AM312.jpg" alt="PIR AM312" class="PIRImage">
+                <img src="./Images/PIR AM312.jpg" alt="PIR AM312" class="PIRImage">
                 <div class="PIRText">
                     <h2>PIR senzor</h2>
                     <p>PIR senzor byl využit pro detekci pohybu. 
-                        Senzor dokáže detekovat pohyb na vzdálenost až 5 metrů a úhel 120°. 
-                        Při detekci pohybu vysílá signál na microbit, který začne blikat LED diody a přehrávat zvukovou výstrahu.
+                        Senzor dokáže detekovat pohyb na vzdálenost až 5 metrů pod úhlem 120°. 
+                        Při detekci pohybu vyšle signál na microbit, který následně spustí definované akce. Napají se na 3,3V.
                     </p>
                 </div>
             </div>

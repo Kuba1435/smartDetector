@@ -1,0 +1,164 @@
+.deviceEditCloseButtn{
+    padding: 0.5em 1.1em;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.9) 0%, rgba(238, 238, 238, 0.9)40%, rgba(192, 192, 192, 0.1) 100%);
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95em;
+    display: flex;
+    margin-left: 1vw;
+    margin-top: 2vh;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(16,51,94,0.5);
+  }
+
+.deviceEdit{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
+}
+
+.deviceNotice{
+    display: flex;
+    text-align: left;
+    border-right: 1px solid black;
+    min-width: 40vw;
+    padding-left: 1vw;
+    flex-direction: column;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding-right: 3vw;
+}
+
+
+.notice{
+    display: flex;
+    min-height: 4vh;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    padding-bottom: 0.5vh;
+    border-bottom: 1px solid black;
+}
+
+.noticeText{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding-right: 30%;
+}
+
+.ball{
+    width: 0.5em;
+    height: 0.5em;
+    border-radius: 50%;
+    background: rgb(156, 156, 156);
+    margin-right: 1vw;
+}
+
+.deviceInfo{
+    display: flex;
+    flex-direction: column ;
+    height: 80vh;
+    width: 100vw;
+    align-items: center;
+
+}
+
+.deviceInfo form{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.deviceInfo form input{
+    width: 20vw;
+    height: 3vh;
+    border-radius: 5px;
+    border: 1px solid rgb(16, 51, 94);
+    padding: 0 10px;
+    margin-top: 1vh;
+}
+
+.deviceInfo form input:focus{
+    outline: none;
+    width: 21vw;
+    height: 3.1vh;
+    transition: 0.3s;
+    border: 1px solid rgba(16, 51, 94, 0.986);
+    font-size: 90%;
+}
+
+.deviceInfo form span{
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-top: 1vh;
+    margin-right: 1vw;
+}
+
+.deviceInfo form button{
+    width: 20em;
+    height: 4vh;
+    border-radius: 5px;
+    border: 1px solid rgba(22, 98, 190, 0.9);
+    background: linear-gradient(90deg, rgba(16,51,94,0.9) 0%, rgba(13, 53, 102, 0.9) 70%, rgba(20, 66, 122, 0.85) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-top: 1vh;
+    cursor: pointer;
+    align-self: center;
+}
+
+
+
+@media screen and (max-width: 800px){
+    .deviceEdit{
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .deviceNotice{
+        border-right: none;
+        border-bottom: 1px solid black;
+        min-width: 100vw;
+        max-height: 40vh;
+        overflow-y: auto;
+    }
+
+    .deviceEditCloseButtn{
+        margin-top: 1vh;
+        margin-left: 0;
+    }
+
+    .deviceInfo form{
+        align-items: center;
+    }
+    .deviceInfo form input{
+        width: 40vw;
+    }
+    .deviceInfo form button{
+        width: 40vw;
+    }
+    
+}
+
+
+
+
+
+
+
+
+

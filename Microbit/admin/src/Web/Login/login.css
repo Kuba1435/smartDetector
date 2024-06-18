@@ -1,0 +1,97 @@
+.loginBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(50deg, rgba(16,51,94,0.1) 0%, rgba(13, 53, 102, 0.3) 70%, rgba(20, 66, 122, 0.2) 100%);
+
+}
+
+.loginWindow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 30vw;
+    height: 50vh;
+    border: 1px solid rgb(16, 51, 94);
+    background-color: rgba(233, 234, 235, 0.123);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loginH1{
+    margin-top: 5vh;
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.loginInput{
+    width: 15vw;
+    height: 3.5vh;
+    border-radius: 5px;
+    border: 1px solid rgb(16, 51, 94);
+    padding: 0 10px;
+}
+
+.loginInput:focus{
+    outline: none;
+    width: 15.5vw;
+    height: 3.6vh;
+    transition: 0.3s;
+    border: 1px solid rgba(16, 51, 94, 0.986);
+    font-size: 90%;
+}
+
+.loginButton{
+    width: 12vw;
+    height: 4vh;
+    border-radius: 5px;
+    border: 1px solid rgba(22, 98, 190, 0.9);
+    background: linear-gradient(90deg, rgba(16,51,94,0.9) 0%, rgba(13, 53, 102, 0.9) 70%, rgba(20, 66, 122, 0.85) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-weight: bold;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 110%;
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    .loginWindow{
+        min-width: 70vw;
+        height: 40vh;
+    }
+
+    .loginH1{
+        font-size: 2em;
+    }
+
+    .loginInput{
+        width: 40vw;
+    }
+
+    .loginInput:focus{
+        width: 41vw;
+        height: 3.6vh;
+    }
+
+    .loginButton{
+        width: 40vw;
+    }
+    
+}
